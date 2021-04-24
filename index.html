@@ -1,1 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <link rel="stylesheet" href="./style.css">
+    <title>Project-Tracker</title>
+</head>
+<body>
+    <div class="" id="header" >
 
+        <h1 class="text-center" id="top">Project Tracker</h1>
+        <h2 class="text-center" id="middle">Current Time & Date:</h2>
+        <p id="time" class="answer text-center"></p>
+
+    </div>
+
+    <div class="col-8 col-md-2">
+        <form id="project-form">
+            <h4>Instructions</h4>
+            <p>Click the button below to open a form and provide information for the following</p>
+          <div class="form-group">
+            <input type="text" id="project-name" placeholder="Project Name" class="form-control" />
+          </div>
+          <div class="form-group">
+            <input type="text" id="project-type" placeholder="Project Type" class="form-control" />
+          </div>
+          <div class="form-group">
+            <input type="text" id="due-date" placeholder="Due Date" class="form-control" />
+          </div>
+          <div class="form-group">
+            <input type="text" id="hourly-rate" placeholder="Hourly Rate" class="form-control" />
+          </div>
+          <button type="button" class="btn custom-btn" data-toggle="modal" data-target="#exampleModal">Add Project</button>
+        </form>
+      </div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="form-group">
+                    <label>Project Name</label>
+                    <input type="input" class="form-control" id="projectName" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label>Project Type</label>
+                    <select class="form-control">
+                    <option>Front End (Web Development)</option>
+                    <option>Stuff</option>
+                    <option>Things</option>
+                    <option>People</option>
+                    <option>Class</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Hourly Rate</label>
+                    <input type="input" class="form-control" id="HourlyRate" placeholder="$">
+                </div>
+                <div class="form-group">
+                    <label>Due Date</label>
+                    <input type="text" class="form-control" id="datepicker" autocomplete="off" />
+                </div>
+                </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Submit Project Info</button>
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Project Name</th>
+            <th scope="col">Project Type</th>
+            <th scope="col">Hourly Rate($)</th>
+            <th scope="col">Due Date</th>
+            <th scope="col">Days Until Due Date</th>
+            <th scope="col">Potential Total Earnings($)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      </table>
+ 
+    
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
+    ></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
